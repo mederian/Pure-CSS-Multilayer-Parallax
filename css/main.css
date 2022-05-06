@@ -60,7 +60,7 @@ a {
   bottom: 0;
 }
 
-.sky {
+.scene {
   background: url('../img/pexels-wolfgang-2747446-front.webp') no-repeat center;
   background-size: cover;
   transform: translateZ(-600px) scale(3);
@@ -74,7 +74,7 @@ a {
   z-index: 4;
 }
 
-.hero-container{
+.banner-container{
   background: linear-gradient(
     rgba(0, 0, 0, 0.595) 0%,
     rgba(0, 31, 51, 0.25) 20%,
@@ -82,35 +82,35 @@ a {
     rgba(0, 0, 0, 0.25) 100%
   );
 }
-.hero-text {
+.banner-text {
 
   background-size: cover;
   transform: translateZ(0) scale(1);
   z-index: 7;
 }
 
-.hero-text h2 {
+.banner-text h2 {
   font-size: 1.25rem;
   position: absolute;
   left: 2.5rem;
   top: 2.5rem;
 }
 
-.hero-text ul {
+.banner-text ul {
   font-size: 0.75rem;
   position: absolute;
   right: 2.5rem;
   top: 2.5rem;
 }
 
-.hero-text ul li {
+.banner-text ul li {
   margin-left: 2.5rem;
   list-style-type: none;
   float: left;
   visibility: hidden;
 }
 
-.hero-text ul li:nth-of-type(3) {
+.banner-text ul li:nth-of-type(3) {
   visibility: visible;
 }
 
@@ -194,7 +194,7 @@ a {
 }
 
 @media (min-width: 760px) {
-  .hero-text ul li {
+  .banner-text ul li {
     visibility: visible;
   }
 
@@ -223,13 +223,9 @@ a {
 }
 
 @media (min-width: 1126px) {
-  .sky,
-  .bushes,
-  .water,
+  .scene,
   .people1,
-  .people2,
-  .people3,
-  .hero-text {
+  .banner-text {
     background-size: contain;
   }
 }
