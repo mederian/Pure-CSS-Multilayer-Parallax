@@ -45,6 +45,7 @@ a {
   perspective: 300px;
 }
 
+/*  ----------------Parallax --------------------*/
 .parallax__group {
   position: relative;
   height: 100vh;
@@ -61,8 +62,8 @@ a {
 }
 
 .scene {
-  background: url('../img/pexels-wolfgang-2747446-front.webp') no-repeat center;
-  background-size: cover;
+  background: url('../img/pexels-wolfgang-2747446-front.webp') no-repeat center center fixed;
+  background-size:cover;
   transform: translateZ(-600px) scale(3);
   z-index: 1;
 }
@@ -73,7 +74,14 @@ a {
   transform: translateZ(-250px) scale(1.833333333);
   z-index: 4;
 }
+.title-container {
+  background: url('../img/LOGO2-hvit.webp') no-repeat center top;
+  background-size:auto;
+  transform: translateZ(-100px) scale(1);
+  z-index: 6;
+}
 
+/*
 .banner-container{
   background: linear-gradient(
     rgba(0, 0, 0, 0.595) 0%,
@@ -82,8 +90,8 @@ a {
     rgba(0, 0, 0, 0.25) 100%
   );
 }
+*/
 .banner-text {
-
   background-size: cover;
   transform: translateZ(0) scale(1);
   z-index: 7;
@@ -96,10 +104,11 @@ a {
   top: 2.5rem;
 }
 
+
 .banner-text ul {
   font-size: 0.75rem;
+  left: 50%;
   position: absolute;
-  right: 2.5rem;
   top: 2.5rem;
 }
 
@@ -114,37 +123,38 @@ a {
   visibility: visible;
 }
 
-.year-container {
+
+.subtitle-container {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 80%;
   transform: translate(-50%, -50%);
-  width: 17rem;
+  width: 30rem;
   height: 25rem;
 }
 
-.year-container h1 {
+.subtitle-container h1 {
   font-family: Bebas, sans-serif;
   font-weight: 400;
   position: absolute;
   font-size: 3.5rem;
 }
 
-.year-container h1:nth-of-type(1) {
+.subtitle-container h1:nth-of-type(1) {
   top: 10%;
 }
 
-.year-container h1:nth-of-type(2) {
+.subtitle-container h1:nth-of-type(2) {
   left: 30%;
   bottom: 0;
 }
 
-.year-container h1:nth-of-type(3) {
+.subtitle-container h1:nth-of-type(3) {
   top: 0;
   right: 30%;
 }
 
-.year-container h1:nth-of-type(4) {
+.subtitle-container h1:nth-of-type(4) {
   right: 0;
   bottom: 20%;
 }
@@ -160,7 +170,7 @@ a {
   margin-right: 0.25rem;
 }
 
-.info-container {
+.content-container {
   background: #000;
   transform: translateZ(0) scale(1);
   z-index: 8;
@@ -171,14 +181,14 @@ a {
   text-align: center;
 }
 
-.info-container img {
+.content-container img {
   width: 75%;
   margin-bottom: 2.5rem;
   filter: saturate(0.65);
 }
 
-.info-container h2,
-.info-container p {
+.content-container h2,
+.content-container p {
   margin-bottom: 1rem;
 }
 
@@ -198,7 +208,7 @@ a {
     visibility: visible;
   }
 
-  .info-container {
+  .content-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3rem;
@@ -206,7 +216,7 @@ a {
     text-align: left;
   }
 
-  .info-container img {
+  .content-container img {
     justify-self: end;
     width: 75%;
   }
@@ -222,7 +232,7 @@ a {
   }
 }
 
-@media (min-width: 1126px) {
+@media (max-width: 1124px) {
   .scene,
   .people1,
   .banner-text {
